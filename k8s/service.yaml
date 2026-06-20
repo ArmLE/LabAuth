@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: token-api
+  name: dummy-api
 spec:
   selector:
-    app: token-api
+    app: dummy-api
   ports:
     - port: 80
       targetPort: 8080

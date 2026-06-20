@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: token-api
+  name: dummy-api
   labels:
-    app: token-api
+    app: dummy-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: token-api
+      app: dummy-api
   template:
     metadata:
       labels:
-        app: token-api
+        app: dummy-api
     spec:
       containers:
-        - name: token-api
-          image: localhost/token-api:1.0
+        - name: dummy-api
+          image: localhost/dummy-api:1.0
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
